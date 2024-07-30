@@ -7,7 +7,7 @@ class ListNode:
         self.val = x
         self.next = None
 
-class Solution:
+class MySolution:
     def hasCycle(self, head: Optional[ListNode]) -> bool:
 
         #If the head is None then cannot be a cycle
@@ -33,3 +33,40 @@ class Solution:
 
         # Return False in case of the normal tail end (i.e, point to None)
         return False
+
+
+class TortoiseSolution:
+    def hasCycle(head: Optional[ListNode]) -> bool:
+
+        # If head is None
+        if head is None:
+            return False
+        
+        # Using two pointers moving at different speeds
+        # Initially set to head
+        fast = head
+        slow = head
+
+        #While they are not pointing to None
+        while slow.next and fast.next.next:
+            fast = fast.next.next
+            slow = slow.next
+
+            print(f"Slow={slow.val},Fast={fast.val}")
+
+            if slow == fast:
+                print(f"Slow={slow.val},Fast={fast.val} cycle")
+                return True
+            
+        return False
+
+
+a = ListNode(1)
+b = ListNode(2)
+c = ListNode(3)
+
+a.next = b
+b.next = c
+c.next = a
+
+print(TortoiseSolution.hasCycle(a))
