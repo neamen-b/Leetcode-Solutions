@@ -12,21 +12,20 @@ class TreeNode:
 
 class Solution:
 
-    def PreOrderTraversal(self, root: Optional[TreeNode]) -> List[TreeNode]:
-
-        def Helper(root: TreeNode, list_of_nodes: List[int]) -> None:
-
+    def MaxDepth(self, root: Optional[TreeNode]) -> List[TreeNode]:
+            
             if root is not None:
-                print(f"Node Val: {root.val}")
-                list_of_nodes.append(root.val)
-                Helper(root.left_child, list_of_nodes)
-                Helper(root.right_child, list_of_nodes)
+                # print(f"Node Val: {root.val}")
+                # list_of_nodes.append(root.val)
+                left_depth = self.MaxDepth(root.left_child)
+                right_depth = self.MaxDepth(root.right_child)
+                # print(f"left_depth {left_depth}, right_depth {right_depth}")
+                return 1 + max(left_depth, right_depth)
             else: 
-                print('None')
+                # print('None')
+                return 1
 
-        list_of_nodes = []
-        Helper(root,list_of_nodes)
-        return list_of_nodes
+        # return list_of_nodes
         
 
 A = TreeNode('A')
@@ -47,7 +46,7 @@ C.left_child = G
 
 # Preorder traversal with  
 sol = Solution()
-sol.PreOrderTraversal(A)
+print(sol.MaxDepth(A))
         
             
 
