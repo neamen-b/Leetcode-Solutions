@@ -16,16 +16,13 @@ class Solution:
             
             if root is not None:
                 # print(f"Node Val: {root.val}")
-                # list_of_nodes.append(root.val)
                 left_depth = self.MaxDepth(root.left_child)
                 right_depth = self.MaxDepth(root.right_child)
                 # print(f"left_depth {left_depth}, right_depth {right_depth}")
                 return 1 + max(left_depth, right_depth)
             else: 
                 # print('None')
-                return 1
-
-        # return list_of_nodes
+                return 0
         
 
 A = TreeNode('A')
