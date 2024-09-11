@@ -22,4 +22,4 @@ class Solution:
         return int_list
     
 sol = Solution()
-print(sol.plusOne([9))
+print(sol.plusOne([9]))

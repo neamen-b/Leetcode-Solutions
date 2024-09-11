@@ -48,6 +48,9 @@ class Solution:
         pattern = r'[a-z0-9]'
 
         # Does three things
+        # 1. finds all characters that match the given pattern
+        # 2. returns them as a list of characters
+        # 3. joins the element of the list on empty string
         matches = ''.join(re.findall(pattern= pattern, string = s))
 
         # The middle index with integer division
@@ -57,10 +60,14 @@ class Solution:
         # range(0, mid_index) populates 'i''s sequence
         # range(len(matches)-1, mid_index, -1) poopulates 'j's sequence
         # Zip puts those two sequence together. They should be equal given that s is split halfway
+        # Range functions end value is exclusive so added 1 and -1 to make it inclusive of the middle index
+
         for i, j in zip ( range(0, mid_index + 1), range(len(matches)-1, mid_index -1, -1)):
-            
-            print(f'matches at i {matches[i]}, matches at j {matches[j]}')
-            print(f'j = {j} , i = {i}')
+            # Testing
+            # print(f'matches at i {matches[i]}, matches at j {matches[j]}')
+            # print(f'j = {j} , i = {i}')
+
+            # If not equal at any point, return false
             if matches[i] != matches[j]:
                 return False
         

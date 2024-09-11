@@ -10,6 +10,7 @@ Initial thoughts:
 
     
     Execution
+    Worked fine but is slow. 
 '''
 
 
@@ -33,7 +34,6 @@ class Solution():
             else: 
                 mydict[number] = mydict[number] + 1
 
-        
         n = len(nums)
         
         # for each pair, see if count is > n/2, if so , return element

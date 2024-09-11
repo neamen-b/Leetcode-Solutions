@@ -49,9 +49,9 @@ class Solution:
             Iterator(0) = |0|0|2|1|1|2|     start = 0 , iterator = 0 , end = 4  # 0,5 = 5,0
             Iterator(0) = |0|0|2|1|1|2|     start = 1 , iterator = 1 , end = 4  # 0,1 = 1,0 - 0 swapped 0 so no vsible difference
             Iterator(1) = |0|0|1|1|2|2|     start = 2,  iterator = 2,  end = 4  # 1,0 = 0,1 
-            Iterator(2) = |0|0|1|1|2|2|     start = 1,  iterator = 3,  end = 4  # No swaps, leave 1
-            Iterator(3) = |0|0|1|1|2|2|     start = 1,  iterator = 4,  end = 4  # No swaps, leave 1
-            Iterator(4) = |0|0|1|1|2|2|     start = 1,  iterator = 4,  end = 4
+            Iterator(2) = |0|0|1|1|2|2|     start = 2,  iterator = 2,  end = 3  # No swaps, leave 1
+            Iterator(3) = |0|0|1|1|2|2|     start = 2,  iterator = 3,  end = 3  # No swaps, leave 1
+            Iterator(4) = |0|0|1|1|2|2|     start = 2,  iterator = 4,  end = 3
 
             Loop ends becuase iterator = 4 and end = 3, the unsorted part is gone essentially
         '''
