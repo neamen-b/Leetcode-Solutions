@@ -39,8 +39,8 @@ function TreeNode(val, left, right){
 
 let findTarget = function(root, k){
 
-    // Mao to contain all the values , Node -> Value
-    let myMap = new Map();
+    // set to contain all the values 
+    let mySet = new Set();
 
     // Helper function to traverse in order
     let inOrderTraverse = function(root){
@@ -52,7 +52,7 @@ let findTarget = function(root, k){
         if(root.left){
             inOrderTraverse(root.left);
         }
-        myMap.set(root, root.val);
+        mySet.add(root.val);
 
         if(root.right){
             inOrderTraverse(root.right);
@@ -61,10 +61,13 @@ let findTarget = function(root, k){
 
     inOrderTraverse(root);
 
-    for (node of myMap.keys()){
+    for (node of mySet){
         // console.log(node);
         // console.log('----------');
-        if(myMap.has(k - node) && myMap.size > 1){
+
+        // Remove the value first so that it is not counted in the complement
+        mySet.delete(node.val);
+        if(mySet.has(k - node.val) && mySet.size > 1){
             return true;
         }
     }
