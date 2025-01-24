@@ -76,7 +76,6 @@ let twoSum = function(nums, target){
 
 // twoSum([12,3], 4);
 
-
 /**
  * @param {number[]} nums
  * @param {number} target
@@ -102,7 +101,7 @@ let twoSum2 = function(nums, target){
     let start = 0;
     let end  = num_and_index.length - 1;
     
-    console.log(num_and_index[start][0], num_and_index[end][0]);
+    // console.log(num_and_index[start][0], num_and_index[end][0]);
     while (start < end){
 
         if(num_and_index[start][0] + num_and_index[end][0] < target){

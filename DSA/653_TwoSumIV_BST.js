@@ -66,7 +66,11 @@ let findTarget = function(root, k){
         // console.log('----------');
 
         // Remove the value first so that it is not counted in the complement
-        mySet.delete(node.val);
+
+        // YOU CANNOT DELETE IT BECAUSE it could be sum part for another number
+        // mySet.delete(node.val);
+
+        
         if(mySet.has(k - node.val) && mySet.size > 1){
             return true;
         }

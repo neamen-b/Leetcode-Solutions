@@ -62,3 +62,4 @@ let isAnagram = function (s, t) {
 }
 
 console.log(isAnagram('Chigerish', 'Chigerish'));
+

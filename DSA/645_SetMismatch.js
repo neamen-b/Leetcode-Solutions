@@ -14,7 +14,7 @@
 
 
 let findErrorNums = function(nums){
-    // freq dist table
+    // freq dist table 
     let myMap = new Map();
     let n = nums.length;
     let duplicate = undefined;

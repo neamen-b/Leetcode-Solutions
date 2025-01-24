@@ -100,11 +100,39 @@ list1_8.next = list1_9;
 list2_head.next = list2_3;
 list2_3.next = list2_4;
 
-node = mergeTwoLists(list1_head, list2_head);
+// node = mergeTwoLists(list1_head, list2_head);
 
-while(node){
-    console.log(node.val);
-    node = node.next;
+// while(node){
+//     console.log(node.val);
+//     node = node.next;
+// }
+
+
+
+
+/**
+ * @param {ListNode} head1
+ * @param {ListNode} head2
+ * @return {ListNode}
+ * 
+ * Recursive solution
+ */
+
+
+let MergeTwoLists = function (head1, head2){
+
+    if (head1 === null && head2 !== null){
+        return head2;
+    }
+    else if (head1 !== null && head2 === null){
+        return head1;
+    }
+    else if (head1 === null && head2 === null){
+        return head1;
+    }
+
+    
+
 }
 
-
+MergeTwoLists(list1_head, list2_head);

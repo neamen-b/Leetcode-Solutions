@@ -12,13 +12,7 @@
  *          If stack[end] is C, stack.pop()
  *      else
  *          stack.push(character)
- * 
- * 
- * 3. 
- * 
  */
-
-
 /**
  * @param {string} s
  * @return {interger}

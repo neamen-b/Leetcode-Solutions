@@ -73,6 +73,7 @@ let findMaxAverage = function(nums,k){
  * @return {number}
  * Sliding window with just two pointers
  * Still slow for some annoying reason. Perhaps the infinity?
+ * EUREKA! It was becuase I was creating a new variable of ave each time. Spelling can cost you time!
  */
 
 let findMaxAverage2 = function(nums, k){
