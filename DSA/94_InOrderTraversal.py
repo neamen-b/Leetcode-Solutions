@@ -21,3 +21,19 @@ class Solution:
         array = []
         inOrder(root,array)
         return array
+
+order = []
+
+def traverse(root: Optional[TreeNode])->None:
+
+    if root is None:
+        return None
+    
+    if root:
+        traverse(root.left)
+
+    order.append(root)
+
+    if root:
+        traverse(root.right)
+

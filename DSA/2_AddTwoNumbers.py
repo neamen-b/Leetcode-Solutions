@@ -44,6 +44,7 @@ l2 = ListNode(2)
 
 l2.next = ListNode(4)
 
- 
-
 print(addTwoNumbers(l1, l2).val)
+
+
+# Apparently this can be solved recursilvely

@@ -43,7 +43,26 @@ C.left_child = G
 
 # Preorder traversal with  
 sol = Solution()
-print(sol.MaxDepth(A))
+# print(sol.MaxDepth(A))
+
+sum, max = 0, float("-inf")
+def traverse(root: Optional[TreeNode]):
+     global sum, max
+     sum+=1
+     if root is None:
+          sum-=1
+          if sum > max:
+               max = sum
+          return
+     
+     traverse(root.left_child)
+     print(root.val, sum)
+     traverse(root.right_child)
+     sum-=1
+
+traverse(A)
+print(max)
+     
         
             
 
