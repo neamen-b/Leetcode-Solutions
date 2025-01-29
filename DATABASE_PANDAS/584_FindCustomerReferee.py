@@ -11,6 +11,8 @@ def find_customer_referee(customer: pd.DataFrame) -> pd.DataFrame:
     # For some reason this works when run locally on python 3.10 but not on leetcode
     # It does not count the null values on leetcode but does here
     # query_db = customer.query("referee_id != 2 or referee_id == None")
+
+    #This works though. 
     query_db = customer.query("referee_id != 2 or referee_id.isnull()")
     print (query_db['name'])
 
