@@ -1,7 +1,6 @@
 class Solution:
-    def countCharacters(self, words: List[str], chars: str) -> int:
+    def countCharacters(words, chars: str) -> int:
         
-
         def check(candidate, source):
             sourceMap = {}
             for char in source:

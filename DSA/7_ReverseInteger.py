@@ -12,7 +12,7 @@ def reverse( x: int) -> int:
             ans_str.append(str(remainder))
             num = int (num / 10)
         
-        print(ans_str)
+        # print(ans_str)
 
         trailing = True
 
@@ -21,10 +21,10 @@ def reverse( x: int) -> int:
                   trailing = False
              if ans_str[i] == '0' and trailing == True:
                   ans_str[i] = ''
-        print(ans_str)
+        # print(ans_str)
 
         ans_int = int(''.join(ans_str))   
-        print(ans_int)
+        # print(ans_int)
 
         if -2**31 > ans_int or ans_int > 2**31 - 1:
              return 0

@@ -12,7 +12,6 @@ basically loop thorugh the 1d array
 
 '''
 
-
 def construct2DArray(original, m, n):
 
     # If the number of elements don't match up. Meaning m*n != length of og
@@ -33,8 +32,6 @@ def construct2DArray(original, m, n):
 
 # print(construct2DArray([1,2,3,4], 2,2))
 
-myset = set(['a','b','c'])
-print(myset)
-        
-
-print('a' in myset)
+# myset = set(['a','b','c'])
+# print(myset)
+# print('a' in myset)

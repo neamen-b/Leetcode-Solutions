@@ -11,6 +11,10 @@ Initial thoughts
             
         return true
 
+
+        Time : O (rxc)
+        Space : O(1)
+
 '''
 
 
@@ -29,6 +33,6 @@ def isToeplitzMatrix(matrix)-> bool:
                 
     return True
 
-matrix = [[1]]
+matrix = [[1,2]]
 
 print(isToeplitzMatrix(matrix))
