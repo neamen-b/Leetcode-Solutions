@@ -52,7 +52,43 @@ class TreeNode:
 
 
 import math
+
+# Optimized Solution
+# Time - O(logn + n) = O(n) the reverse function. If not thought would be log(label) which is pretty good. 
+# Space - O(logn n) ceiling. No recursion so easy on the call stack 
+
+# much much faster
+def pathinzigzag(label):
+    ans = []
+
+    ans.append(label)
+
+    while label > 1:
+        # Proposed parent
+        parent = label // 2
+        # Find the 
+        label_level = math.floor(math.log2(label) + 1)
+        true_parent_level = label_level - 1
+
+        # if the parent is on an even label, then labeling is right to left to we need to reverse
+        # I don't know if this is necessary tbh
+        # Yeah it is not. 
+        if true_parent_level % 2 == 0:
+            lower_bound = math.pow(2, true_parent_level) - 1
+            upper_bound = math.pow(2, true_parent_level - 1)
+        else:
+            lower_bound = math.pow(2, true_parent_level - 1)
+            upper_bound = math.pow(2, true_parent_level) - 1
+        
+        true_parent = abs(lower_bound + upper_bound - parent)
+        ans.append(int(true_parent))
+        label = true_parent
+    return ans[::-1]
+
+print(pathinzigzag(14))
+
 ans = []
+# This is slow because it can be done iteratively man c'mon! Think of your call stack blowing up. 
 def PathInZigzagTree(label):
     # ans.append(label)
     if label == 1:
@@ -62,6 +98,7 @@ def PathInZigzagTree(label):
     label_level = math.floor(math.log2(label) + 1)
     parent_level = label_level - 1
 
+    # This is not necessary. List comprehension is expensize. You can just use lower and upper. 
     if parent_level % 2 == 0:
         parent_range = [x for x in range(int(math.pow(2, parent_level) - 1), int(math.pow(2, parent_level -1) - 1), -1)]
     else:
@@ -73,8 +110,8 @@ def PathInZigzagTree(label):
     PathInZigzagTree(true_parent)
 
 
-print(PathInZigzagTree(14)) 
-print(ans[::-1])
+# print(PathInZigzagTree(14)) 
+# print()
 # parent_level = 3
 # for x in range(int(math.pow(2, parent_level) - 1), int(math.pow(2, parent_level - 1)) -1, -1):
 #     print(x)
