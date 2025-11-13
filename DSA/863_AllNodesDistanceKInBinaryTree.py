@@ -61,11 +61,11 @@ class Solution:
                 if neighbour not in visited:
                     visited.add(neighbour)
                     # increase the distance from start by one
-                    queue.append((curr, count + 1))
+                    queue.append((neighbour, count + 1))
         return ans
     
     def distanceK(self, root, target, k):
-        self.buildgraph(root)
-        return self.bfs(target, k)
+        self.buildgraph(root, None)
+        return self.bfs(target.val, k)
 
 

@@ -19,7 +19,6 @@ class Node:
         # Each node can be the end of a word. This flag indicates
         self.isEndOfWord = False
 
-
 class Trie:
 
     def __init__ (self) -> None:

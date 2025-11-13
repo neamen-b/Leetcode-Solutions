@@ -44,7 +44,51 @@ l2 = ListNode(2)
 
 l2.next = ListNode(4)
 
-print(addTwoNumbers(l1, l2).val)
+# print(addTwoNumbers(l1, l2).val)
 
 
 # Apparently this can be solved recursilvely
+# and here ius the recursive approach 11/12/2025
+
+
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+
+import math
+from typing import Optional
+
+def traverselist(self, node: ListNode, count : int) -> int:
+
+        if node.next is None:
+            return (10 ** count) * node.val
+        
+        return (10 ** count) * node.val + self.traverselist(node.next, count + 1)
+
+def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
+
+        sum_of_numbers = self.traverselist(l1, count = 0) + self.traverselist(l2, count = 0)
+        # print(f"sum of numbers = {sum_of_numbers}")
+
+        # Build a new linked list
+
+        quotient = sum_of_numbers
+        new_head = ListNode(int(quotient % 10), None)
+        curr_node = new_head
+        quotient = quotient // 10
+
+        while(quotient != 0):
+            print(f"quotient {quotient}")
+            remainder = quotient % 10
+            new_node = ListNode(int(remainder))
+            curr_node.next = new_node
+            curr_node = new_node
+            quotient = quotient // 10
+        
+        return new_head
+
+
+        
+        

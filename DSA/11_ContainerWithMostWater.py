@@ -43,14 +43,12 @@ def maxArea2 ( heights) -> int:
 
     while i < j:
         smaller = min (heights[i], heights[j])
-        max_area = max(max_area,  (j - i) * smaller)
+        max_area = max (max_area,  (j - i) * smaller)
 
         if heights[i] < heights[j]:
             i += 1
         else:
             j -= 1
     return max_area
-
-
 
 print(maxArea2([1,8,6,2,5,4,8,3,7]))

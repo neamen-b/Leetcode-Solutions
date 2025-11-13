@@ -12,7 +12,7 @@ def maxDepth(self, s: str) -> int:
             else:
                 pass
         
-        # If there are no parenthesis
+        # If there are no parenthesis 
         if max_v == -1:
             return 0
         return max_v

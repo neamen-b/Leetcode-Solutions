@@ -19,6 +19,10 @@ Initial thoughts
 def canPlaceFlowers(flowerbed, n):
 
     for i in range(len(flowerbed)):
+
+        # The flowerbed can at least n so no need to keep looping
+        if n == 0:
+            break
         
         if flowerbed[i] == 0:
             if i - 1 < 0:

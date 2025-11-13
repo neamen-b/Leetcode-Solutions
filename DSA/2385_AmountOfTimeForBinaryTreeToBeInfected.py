@@ -15,6 +15,11 @@ how to convert?
      after this, 
 
      bfs/dfs from the start point and find the max depth from this node. 
+
+Lessons learned
+
+    Unpacking from a tuple is much faster than unpacking from a list
+        so whenever there is unpacking involved, use tuples
 '''
 # Now perform Bfs from starts point
 from collections import deque

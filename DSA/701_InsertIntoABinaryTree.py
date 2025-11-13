@@ -1,3 +1,4 @@
+
 def insertIntoBST(self, root: Optional[TreeNode], val: int) -> Optional[TreeNode]:
         if root is None:
             return TreeNode(val)

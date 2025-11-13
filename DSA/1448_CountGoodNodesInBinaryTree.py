@@ -26,7 +26,7 @@ def goodNodes(root):
     count = 0
 
     def dfs(node, max_val):
-
+        nonlocal count
         if node is None:
             return None
         

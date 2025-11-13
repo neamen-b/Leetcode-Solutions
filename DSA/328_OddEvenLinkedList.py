@@ -35,7 +35,7 @@ def oddEvenList (head : Optional[ListNode]) -> Optional[ListNode]:
         if even """
 
     while (curr_even and curr_even.next):
-        print("before", curr_odd.val, curr_even.val)
+        # print("before", curr_odd.val, curr_even.val)
         curr_odd.next = curr_even.next
         curr_odd = curr_odd.next
         curr_even.next = curr_odd.next

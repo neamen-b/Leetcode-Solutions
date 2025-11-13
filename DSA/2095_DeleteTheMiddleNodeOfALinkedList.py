@@ -39,7 +39,7 @@ def displayLinkedList(head):
     
 # displayLinkedList(head)
 
-# Hare and Tortoise. Delta = 3. Return middle element
+# Hare and Tortoise. Delta = 3. Return head
 def RemoveMiddleNode(head : ListNode) -> ListNode:
     if head is None:
         return None
@@ -72,7 +72,7 @@ def RemoveMiddleNode(head : ListNode) -> ListNode:
     return head
 
 
-# Hashmap approach. O(n) space
+# Hashmap approach. O(n) space. This works but if not memory efficient
 def RemoveMiddleNode2(head: ListNode) -> ListNode:
     if head.next is None:
         return None

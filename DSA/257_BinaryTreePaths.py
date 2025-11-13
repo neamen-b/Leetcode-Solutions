@@ -39,7 +39,7 @@ def binaryTreePaths(root: Optional[TreeNode]) -> List[str]:
         # for i in range(len(ans)):
         #      ans[i] = ans[i][:len(ans[i])-2]
         
-        final_ans = set(ans)
+        # final_ans = set(ans)
         return ans
 
 print(binaryTreePaths(A))
