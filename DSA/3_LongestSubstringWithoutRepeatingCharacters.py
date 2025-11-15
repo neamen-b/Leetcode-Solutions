@@ -58,8 +58,6 @@ class Solution:
         start, end = 0, 0
         maxLength : int = 0
 
-        # if len(s) == 1:
-        #     return 1
         
         while end < len(s):
             
